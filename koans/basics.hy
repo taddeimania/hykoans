@@ -7,7 +7,7 @@
    [test-assert-truth
     (fn [self]
       "We shall contemplate truth by testing reality, via asserts."
-      (self.assertTrue True))]
+      (self.assertTrue False))]
 
    [test-assert-with-message
      (fn [self]
