@@ -1,5 +1,5 @@
 (import unittest)
-(import [koan [Koan]])
+(import [koan [Koan __ ___ ____ _____]])
 
 
 (defclass Basics [Koan] [
