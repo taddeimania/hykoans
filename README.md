@@ -15,7 +15,7 @@ new things. :beer:
 
 All you need to get going is to have `Hy` installed on your system/virtualenv.  See the [Hy](http://hylang.org) instructions for installation if you need help with that.
 
-After you've install `Hy` all you have left is it type the following into a command line:
+After you've installed `Hy` all you have left is to type the following into a command line:
 
 ```
 hy test_runner.hy
