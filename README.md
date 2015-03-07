@@ -30,7 +30,7 @@ We shall contemplate truth by testing reality, via asserts.
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "/Users/youruser/hy-koans/koans/basics.hy", line 10, in test_assert_truth
-    (self.assertTrue False))]
+    (self.assertTrue (= ____ True)))]
 AssertionError: False is not true
 ----------------------------------------------------------------------
 ```
@@ -57,7 +57,7 @@ Enlightenment may be more easily achieved with appropriate messages.
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "/Users/youruser/hy-koans/koans/basics.hy", line 15, in test_assert_with_message
-    (self.assertTrue False "This should be True, fix it!"))]])
+    (self.assertTrue (= ____ True) "This should be True, fix it!"))]
 AssertionError: This should be True, fix it!
 ----------------------------------------------------------------------
 ```
