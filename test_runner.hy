@@ -1,5 +1,5 @@
 (import sys unittest os glob)
-(import [koans [basics]])
+(import [koans [a_basics]])
 
 (setv modules
   (list (filter
