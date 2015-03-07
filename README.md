@@ -23,7 +23,7 @@ hy test_runner.hy
 
 If you see something like the test failure below - you're well on your way!
 
-```
+```python
 ======================================================================
 FAIL: test_assert_truth (koans.basics.Basics)
 We shall contemplate truth by testing reality, via asserts.
@@ -41,16 +41,16 @@ The objective of the Koans project is to get each test passing to demonstrate an
 intention of the unit test.  As you can see from the above test we've got `AssertionError: False is not true`.
 In order to correct this test go into `koans/basics.hy` and change the first test to the following.
 
-```
-  [test-assert-truth
+```clojure
+  [test-1-assert-truth
     (fn [self]
       "We shall contemplate truth by testing reality, via asserts."
-      (self.assertTrue True))]
+      (self.assertTrue (= True True)))]
 ```
 
 of course the fun doesn't end there.  Now you're getting a new failure.
 
-```
+```python
 ======================================================================
 FAIL: test_assert_with_message (koans.basics.Basics)
 Enlightenment may be more easily achieved with appropriate messages.
