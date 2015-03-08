@@ -1,19 +1,23 @@
 (import sys unittest os glob)
-(import [koans [a_asserts]])
+(import [koans [a_asserts b_language]])
+
+(defn file-to-module [x]
+  (setv file-without-filename (x.replace ".hy" ""))
+  (file-without-filename.replace "/" "."))
 
 (setv modules
-  (list
-    (filter
-      (fn [x]
-        (not (in "__init__" x)))
-          (list
-            (map
-              (fn [x]
-                (setv file-without-filename (x.replace ".hy" ""))
-                (file-without-filename.replace "/" "."))
-              (glob.glob "koans/*.hy"))))))
-
+  (filter
+    (fn [x]
+      (not (in "__init__" x)))
+    (map file-to-module (glob.glob "koans/*.hy"))))
 
 (setv module-args (list-comp (get sys.modules module) [module modules]))
 
-(apply unittest.main module-args {"failfast": True})
+(setv loader (unittest.TestLoader))
+(setv suite (loader.loadTestsFromModule (first module-args)))
+
+(for [module (rest module-args)]
+     (suite.addTests (loader.loadTestsFromModule module)))
+
+(setv runner (apply unittest.TextTestRunner [] {"verbosity" 2}))
+(runner.run suite)
