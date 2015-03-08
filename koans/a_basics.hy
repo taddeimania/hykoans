@@ -38,11 +38,9 @@
        "Understand what lies within"
        (assert false))]
 
-;   Hy does not seem to like __magic__ methods on primitives
-;
-;   [test-7-that-sometimes-we-need-to-know-the-class-type
-;     (fn [self]
-;       "What is in a class name?"
-;       (self.assertEqual __ "naval".__class__))]
+   [test-7-that-sometimes-we-need-to-know-the-class-type
+     (fn [self]
+       "What is in a class name?"
+       (self.assertEqual __ (. "naval" __class__)))]
 
    ])
