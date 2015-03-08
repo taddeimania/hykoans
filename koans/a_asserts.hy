@@ -2,7 +2,7 @@
 (import [koan [Koan __ ___ ____ _____]])
 
 
-(defclass Basics [Koan] [
+(defclass Asserts [Koan] [
 
    [test-1-assert-truth
     (fn [self]
