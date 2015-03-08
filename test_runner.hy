@@ -19,5 +19,5 @@
 (for [module (rest module-args)]
      (suite.addTests (loader.loadTestsFromModule module)))
 
-(setv runner (apply unittest.TextTestRunner [] {"verbosity" 2}))
+(setv runner (apply unittest.TextTestRunner [] {"verbosity" 2 "failfast" true}))
 (runner.run suite)
