@@ -63,3 +63,5 @@ AssertionError: This should be True, fix it!
 ```
 
 I'll let you take it from here.
+
+<script type="text/javascript" src="https://asciinema.org/a/17817.js" id="asciicast-17817" async></script>
