@@ -1,4 +1,4 @@
-# Hy Koans
+# hykoans
 
 ### Warning: WORK IN PROGRESS
 
@@ -13,23 +13,27 @@ new things. :beer:
 
 ### Instructions
 
-All you need to get going is to have `Hy` installed on your system/virtualenv.  See the [Hy](http://hylang.org) instructions for installation if you need help with that.
-
-After you've installed `Hy` all you have left is to type the following into a command line:
+You cannot pip install hykoans yet but you can install it and Hy to your virtualenv by typing:
 
 ```
-hy test_runner.hy
+python setup.py install
+```
+
+Then you can run the command
+
+```
+hyk
 ```
 
 If you see something like the test failure below - you're well on your way!
 
 ```python
 ======================================================================
-FAIL: test_assert_truth (koans.basics.Basics)
+FAIL: test_assert_truth (koans.a_asserts.Asserts)
 We shall contemplate truth by testing reality, via asserts.
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/youruser/hy-koans/koans/basics.hy", line 10, in test_assert_truth
+  File "/Users/youruser/hykoans/koans/a_asserts", line 10, in test_assert_truth
     (self.assertTrue (= ____ True)))]
 AssertionError: False is not true
 ----------------------------------------------------------------------
@@ -39,7 +43,7 @@ AssertionError: False is not true
 
 The objective of the Koans project is to get each test passing to demonstrate an understanding of the
 intention of the unit test.  As you can see from the above test we've got `AssertionError: False is not true`.
-In order to correct this test go into `koans/basics.hy` and change the first test to the following.
+In order to correct this test go into `koans/a_asserts.hy` and change the first test to the following.
 
 ```clojure
   [test-1-assert-truth
@@ -52,16 +56,14 @@ of course the fun doesn't end there.  Now you're getting a new failure.
 
 ```python
 ======================================================================
-FAIL: test_assert_with_message (koans.basics.Basics)
+FAIL: test_assert_with_message (koans.a_asserts.Asserts)
 Enlightenment may be more easily achieved with appropriate messages.
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/youruser/hy-koans/koans/basics.hy", line 15, in test_assert_with_message
+  File "/Users/youruser/hykoans/koans/a_asserts.hy", line 15, in test_assert_with_message
     (self.assertTrue (= ____ True) "This should be True, fix it!"))]
 AssertionError: This should be True, fix it!
 ----------------------------------------------------------------------
 ```
 
 I'll let you take it from here.
-
-<script type="text/javascript" src="https://asciinema.org/a/17817.js" id="asciicast-17817" async></script>

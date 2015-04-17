@@ -14,7 +14,7 @@ def readme():
 
 setup(
     name='hykoans',
-    version='0.1.1',
+    version='0.1.2',
     install_requires=['hy>=0.1.10'],
     author="Joel Taddei @taddeimania",
     author_email="jtaddei@gmail.com",
