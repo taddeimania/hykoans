@@ -1,7 +1,3 @@
-(import unittest)
-
-(defclass Koan [unittest.TestCase])
-
 (def __ "(FILL ME IN)")
 
 (defclass ___ [Exception])
@@ -13,3 +9,5 @@
 (def ______ (fn [& others]))
 
 (def _______ [])
+
+

@@ -1,5 +1,5 @@
 (import sys unittest os glob)
-(import [hykoans [koans [a_asserts b_language]]])
+(import [hykoans.koans [a_asserts b_language]])
 
 (defn file-to-module [x]
   (setv file-without-filename (x.replace ".hy" ""))
@@ -12,7 +12,7 @@
   (filter
     (fn [x]
       (not (in "__init__" x)))
-    (map file-to-module (glob.glob (.format "koans/{}*.hy" module-letter-name)))))
+    (map file-to-module (glob.glob (.format "hykoans/koans/{}*.hy" module-letter-name)))))
 
 (setv module-args (list-comp (get sys.modules module) [module modules]))
 
@@ -22,7 +22,6 @@
 (for [module (rest module-args)]
      (suite.addTests (loader.loadTestsFromModule module)))
 
-(setv runner (apply unittest.TextTestRunner [] {"verbosity" 2 "failfast" true}))
-
-(defn main []
+(defn test-suite-runner []
+  (setv runner (apply unittest.TextTestRunner [] {"verbosity" 2 "failfast" true}))
   (runner.run suite))

@@ -1,5 +1,5 @@
-(import unittest)
-(import [hykoans.helpers [Koan __ ____]])
+(import [hykoans.helpers.koan [Koan]]
+        [hykoans.helpers.stub [__ ___ ____ _____]])
 
 (defclass Asserts [Koan] [
 

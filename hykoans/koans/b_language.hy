@@ -1,5 +1,5 @@
-(import unittest)
-(import [hy-koans.helpers [Koan __ ___ ____ _____ ______]])
+(import [hykoans.helpers.koan [Koan]]
+        [hykoans.helpers.stub [__ ___ ____ _____ ______]])
 
 (defclass Language [Koan] [
 
