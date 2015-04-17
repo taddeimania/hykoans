@@ -21,7 +21,7 @@ setup(
     description="Get Hy by fixing these tests!",
     long_description=readme(),
     license="MIT",
-    url='http://github.com/taddeimania/hy-koans',
+    url='http://github.com/taddeimania/hykoans',
     packages=find_packages(),
     test_suite="nose.collector",
     entry_points={
