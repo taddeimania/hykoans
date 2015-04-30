@@ -1,7 +1,7 @@
 (import [hykoans.helpers.koan [Koan]]
         [hykoans.helpers.stub [__ ___ ____ _____ ______]])
 
-(defclass Language [Koan] [
+(defclass Equality [Koan] [
 
    [test-01
     (fn [self]
