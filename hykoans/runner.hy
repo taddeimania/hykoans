@@ -1,5 +1,6 @@
 (import sys unittest os glob)
-(import [hykoans.koans [a_asserts b_core c_equality d_truthiness]])
+(import [hykoans.koans [a_asserts b_core c_equality d_truthiness
+                        e_lists]])
 
 (defn file-to-module [x]
   (setv file-without-filename (x.replace ".hy" ""))
