@@ -11,6 +11,12 @@ to identify the Hy language specifics (after all - Hy is still python).
 Please feel free to give feedback in the issues or contribute a pull request.  The main reason for this is to learn
 new things. :beer:
 
+### Version
+
+This has been tested to run with a Hy version as recent as `stable` which as of this writing is 0.11.1.
+
+Hy `latest` is unlikely to work given syntactic differences from the current stable release.
+
 ### Instructions
 
 You cannot pip install hykoans yet but you can install it and Hy to your virtualenv by typing:
